@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><!-- 切忌加上这个标签-->
+<head>
+    <meta charset="UTF-8"/>
+    <title>springboot-thymeleaf demo</title>
+</head>
+
+<body>
+<!-- 这里的name来自前端 就是ThymeleafController （前端传来的name）-->
+<p th:text="'hell0, ' +${name} + '!'"/>
+</body>
+</html>

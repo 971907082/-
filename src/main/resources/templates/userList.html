@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><!-- 切忌加上这个标签-->
+<head>
+    <meta charset="UTF-8"/>
+    <title>springboot-thymeleaf demo</title>
+</head>
+
+<body>
+<!-- 这里的userList来自前端 就是ThymeleafController （前端传来的userList）-->
+<ul>
+    <li th:each="item,userStat:${userList}">
+        <a th:text="${item.id}"></a>
+        <a th:text="${item.userName}"></a>
+        <a th:text="${item.password}"></a>
+        <a th:text="${item.roleId}"></a>
+    </li>
+</ul>
+</body>
+</html>

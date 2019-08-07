@@ -1,0 +1,69 @@
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    cache: false
+
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 19980218Ws
+    timeout: 5000
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/vpshop?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 19980218Ws
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      filters: stat,wall,slf4j,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: org.wlxy.example.model
+
+app:
+  imgPath: /root/img/
+  info: this is dev
+  author: wusheng
+  email: 7777777@qq.com
+  SwaggerTitle: 这是我的第一个swagger在线文档
+  SwaggerContactName: 吴胜
+  SwaggerContactWebUrl: https://www.baidu.com
+  SwaggerContactEmail: 971907082@qq.com
+  SwaggerVersion: v1.0.0
+  SwaggerDescription: springboot 在线接口的查看文档
+  SwaggerTermsOfServiceUrl: https://www.baidu.com
+
+logging:
+  level:
+    org.wlxy.example.dao : debug
+
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+

@@ -13,6 +13,8 @@ public class EmailUtil {
     //  pljndhlocfumbede
 
 
+
+
     public static MimeMessage createSimpleMail(Session session,String mima,String emailAddresss)
             throws Exception {
 // 创建邮件对象

@@ -21,7 +21,7 @@ public class ExceptionHandle {
         if(e instanceof MyException){
             return MyRsp.wrapper((MyException)e);
         }else if(e instanceof ArithmeticException){
-            return MyRsp.error().msg("这是一个算数异常");
+            return MyRsp.error().msg("这是一个算数方面异常");
         }else if(e instanceof MethodArgumentNotValidException){
             MethodArgumentNotValidException ex= (MethodArgumentNotValidException)e;
             return MyRsp.error().msg(ex.getBindingResult()

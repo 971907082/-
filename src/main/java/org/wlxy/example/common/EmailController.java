@@ -20,6 +20,7 @@ public class  EmailController {
 
         User u = userService.getUserByEmail(email);
 
+
         if (u != null) {
             if (u.getIsActive() == 1) {
                 String mima = (new Random().nextInt(899999) + 100000) + "mm";

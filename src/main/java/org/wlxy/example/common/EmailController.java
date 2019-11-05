@@ -15,6 +15,7 @@ public class  EmailController {
     @Autowired
     UserService userService;
 
+
     @GetMapping ("/sendPassWordToEmail/{email}")
     public Object user(@PathVariable("email") String email) throws Exception {
 

@@ -54,7 +54,6 @@ public class ShoppingCarController {
 
     @GetMapping("/getShoppingCarById/{id}")
     public Object getShoppingCarById(@PathVariable("id") int id){
-
         ShoppingCar shoppingCar=shoppingCarService.getShoppingCarById(id);
         return shoppingCar!=null? MyRsp.success(shoppingCar): MyRsp.wrapper(new MyException(HttpCode.ITEM_NOT_FOUND));
     }

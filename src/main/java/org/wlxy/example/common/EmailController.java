@@ -11,7 +11,7 @@ import java.util.Random;
 @RestController
 @RequestMapping("email")
 @CrossOrigin
-public class EmailController {
+public class  EmailController {
     @Autowired
     UserService userService;
 
@@ -25,7 +25,6 @@ public class EmailController {
                 String mima = (new Random().nextInt(899999) + 100000) + "mm";
                 u.setPassword(mima);
                 userService.updateUser(u);
-
                 EmailUtil.sendEmail(mima, email);
                 return MyRsp.success(null).msg("发送邮件成功，请注意查收");
             } else {
